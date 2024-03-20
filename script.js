@@ -22,3 +22,9 @@ document.getElementById('facebookBtn').addEventListener('click', function() {
     //window.location.href = 'https://connect.facebook.net/en_US/sdk.js';
     //alert('Aquí iría la lógica de autenticación con Facebook');
 });
+
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
